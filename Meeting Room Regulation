@@ -1,0 +1,37 @@
+//
+//  main.cpp
+//  CS220 Practice
+//
+//  Created by Aadam Ahmed on 2/17/23.
+//
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    int maximum_cap;
+    int meeting_room;
+    int left_over;
+    int over;
+    
+    maximum_cap = 20;
+    
+    cout << "How many people are in the room: ";
+    cin >> meeting_room;
+    
+    if (meeting_room <= maximum_cap){
+        cout << "The room is legal to hold a meeting." << endl;
+        left_over = maximum_cap - meeting_room;
+        cout << left_over << " people may legally enter" << endl;
+    }
+    
+    if (meeting_room > maximum_cap){
+        cout << "The room is illegal to hold a meeting!" << endl;
+        over = meeting_room - maximum_cap;
+        cout << "Take " << over << " people out of the room!" << endl;
+    }
+    
+    
+    return 0;
+}
