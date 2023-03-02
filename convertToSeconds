@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int hours;
+  int minutes;
+  int seconds;
+  int hrsToSeconds;
+  int minToSeconds;
+  int total;
+
+
+  cout << "Enter hours: ";
+  cin >> hours;
+  
+  cout << "Enter minutes: ";
+  cin >> minutes;
+  
+  cout << "Enter seconds: ";
+  cin >> seconds;
+  cout << endl;
+
+  hrsToSeconds = (hours * 60) * 60;
+  minToSeconds = (minutes * 60);
+
+  total = hrsToSeconds + minToSeconds + seconds;
+
+  cout << "Total Seconds: " << total;
+  
+
+  return 0;
+  
+}
