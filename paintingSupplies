@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  double height;
+  double width;
+  double area;
+  double paintNeeded;
+  const double gallonOfPaint = 350;
+  double cansNeeded;
+
+  cout << fixed << setprecision(2);
+  cout << "Enter wall height (feet): ";
+  cin >> height;
+  cout << "Enter wall width (feet): ";
+  cin >> width;
+  cout << endl;
+
+  area = height * width;
+  cout << "Wall area: " << area << " square feet" << endl;
+
+  paintNeeded = area / gallonOfPaint;
+  cout << "Paint needed: " << paintNeeded << " gallons" << endl;
+
+  cansNeeded = area / gallonOfPaint;
+  cout << "Cans needed: " << fixed << setprecision(0) << ceil(cansNeeded) << " can(s)";
+
+  return 0;
+
+  
+}
