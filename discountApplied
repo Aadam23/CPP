@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double price;
+    double discount;
+    double totalPrice;
+    
+    cout << "What is the price of the purchase: ";
+    cin >> price;
+    discount = price * .10;
+    totalPrice = price - discount;
+    
+    if (price >= 75)
+    {
+        cout << "Your discounted price = " << totalPrice << endl;
+    }
+    else
+    {
+        cout << "Purchase is less than $75" << endl;
+    }
+    
+    
+    
+    return 0;
+}
