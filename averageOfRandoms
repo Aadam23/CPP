@@ -12,8 +12,11 @@ int main() {
     int num4;
     int num5;
     
+    cout << "Enter two numbers: ";
+    
     cin >> seedVal;
     cin >> highestNum;
+    
     
     srand(seedVal);
     num1 = (rand() % highestNum);
