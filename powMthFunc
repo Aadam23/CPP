@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x;
+    double y;
+    double z;
+    
+    cout << "Enter values for x y z separated by spaces: " << endl;
+    cout << endl;
+    cin >> x >> y >> z;
+    
+    cout << "x to the power of z = " << pow(x,z) << endl;
+    cout << "x to the power of (y to the power of z) = " << pow(x, pow(y,z)) << endl;
+    cout << "absolute value of y = " << abs(y) << endl;
+    cout << "square root of (xy to the power of z) = " << sqrt(pow(x*y,z)) << endl;
+    
+    return 0;
+}
