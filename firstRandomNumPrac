@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+    int seedVal;
+    int smallestValue;
+    int largestValue;
+    
+    cin >> seedVal;
+    cin >> smallestValue;
+    cin >> largestValue;
+    
+    srand(seedVal);
+    
+    largestValue = largestValue - smallestValue + 1;
+    
+    cout << (rand() % largestValue) + smallestValue << endl;
+    cout << (rand() % largestValue) + smallestValue << endl;
+    cout << (rand() % largestValue) + smallestValue << endl;
+    
+    return 0;
+}
