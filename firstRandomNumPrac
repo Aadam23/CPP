@@ -3,22 +3,16 @@
 using namespace std;
 
 int main() {
-    int seedVal;
-    int smallestValue;
-    int largestValue;
+    int smallestInput;
+    int greatestInput;
     
-    cout << "Enter seedVal, smallest value, and greatest value: ";
-    cin >> seedVal;
-    cin >> smallestValue;
-    cin >> largestValue;
+    cout << "Enter your range: ";
+    cin >> smallestInput;
+    cin >> greatestInput;
     
-    srand(seedVal);
-    
-    largestValue = largestValue - smallestValue + 1;
-    
-    cout << (rand() % largestValue) + smallestValue << endl;
-    cout << (rand() % largestValue) + smallestValue << endl;
-    cout << (rand() % largestValue) + smallestValue << endl;
+    cout << (rand() % greatestInput - smallestInput + 1) + smallestInput << endl;
+    cout << (rand() % greatestInput - smallestInput + 1) + smallestInput << endl;
+    cout << (rand() % greatestInput - smallestInput + 1) + smallestInput << endl;
     
     return 0;
 }
