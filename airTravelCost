@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int flightCost;
+  int passengerAge;
+  int numCheckedBags;
+  int totalCost;
+
+  cout << "Flight Cost: ";
+  cin >> flightCost;
+  
+  cout << "Passenger age: ";
+  cin >> passengerAge;
+  
+  cout << "Number of checked bags: ";
+  cin >> numCheckedBags;
+
+  // flightCost = totalCost;
+
+  // Children 2 or under = $0 cost //lap child
+  if (passengerAge <= 2)
+  {
+    flightCost = 0;
+  }
+  // Children older than 2 and younger than 13 = 90% of cost
+  else if ((passengerAge > 2) && (passengerAge < 13))
+  {
+    flightCost *= .9;
+  }
+  // Seniors (60 or older) = 80% of cost
+  else if (passengerAge >= 60)
+  {
+    flightCost *= .8;
+  }
+  
+  // First checked bag is free, second is $25, and each additional is $60.
+  if (numCheckedBags == 1)
+  {
+    flightCost += 0;
+  }
+  else if (numCheckedBags == 2)
+  {
+    flightCost += 25;
+  }
+  else if (numCheckedBags >=3) //CORRECT THIS CODE
+  {
+    flightCost += ((numCheckedBags - 2) * 60) + 25;
+  }
+  
+  cout << endl << endl;
+
+  cout << "Travel Cost: $" << flightCost;
+
+  return 0;
+  
+}
