@@ -1,21 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    const int speedLimit = 65;
+int main() {
+    
+    int speedLimit = 65;
     int currentSpeed;
     
-    cout << "What is current speed: ";
+    cout << "Enter speed: ";
     cin >> currentSpeed;
     
     if (currentSpeed > speedLimit)
     {
-        cout << "SLOW DOWN!!!" << endl;
+        cout << "Too fast" << endl;
     }
-    else
+    else if ((currentSpeed > 45) && (currentSpeed <= speedLimit))
     {
         cout << "Thank you for driving the speed limit." << endl;
+    }
+    else if (currentSpeed < 45)
+    {
+        cout << "Too slow." << endl;
     }
     
     return 0;
