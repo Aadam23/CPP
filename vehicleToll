@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    char input;
+    
+    cout << "Enter c for Car, s for SUV, or t for Truck: ";
+    cin >> input;
+    
+    if ((input == 'c') || (input == 'C'))
+    {
+        cout << "Car Toll = $0.75" << endl;
+    }
+    
+    else if ((input == 's') || (input == 'S'))
+    {
+        cout << "SUV's Toll = $1.05" << endl;
+    }
+    
+    else if ((input == 't') || (input == 'T'))
+    {
+        cout << "Trucks = $1.60" << endl;
+    }
+    else
+    {
+        cout << "Invalid Response." << endl;
+    }
+    
+    
+    
+    return 0;
+}
