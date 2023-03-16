@@ -1,0 +1,41 @@
+//
+//  main.cpp
+//  calculatingUserInput
+//
+//  Created by Aadam Ahmed on 3/13/23.
+//
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    double num1;
+    double num2;
+    char op;
+//    int total;
+    
+    
+    cout << "Input 2 values: ";
+    cin >> num1 >> num2;
+    
+    cout << "Choose what you would like to do (+, *, or /) : ";
+    cin >> op;
+    
+    switch (op) {
+        case '+':
+            cout << num1 + num2 << endl;
+            break;
+        case '*':
+            cout << num1 * num2 << endl;
+            break;
+        case '/':
+            cout << num1 / num2 << endl;
+            
+        default:
+            cout << "Invalid Response." << endl;
+            break;
+    }
+    
+    return 0;
+}
