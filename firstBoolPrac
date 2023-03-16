@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    bool val;
+    
+    val = (5 > 3);
+    
+    if (val)
+        cout << "Value is true" << endl;
+    else
+        cout << "Value is false" << endl;
+    {
+        return 0;
+    }
+}
