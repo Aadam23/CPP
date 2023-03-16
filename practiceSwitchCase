@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int add;
+    int sub;
+    int divide;
+    int multiply;
+    int choice;
+    
+    cout << "Input a number from 1 to 4: ";
+    cin >> choice;
+    
+    switch (choice) {
+        case 1:
+            cout << "add" << endl;
+            break;
+        case 2:
+            cout << "sub" << endl;
+            break;
+        case 3:
+            cout << "divide" << endl;
+            break;
+        case 4:
+            cout << "multiply" << endl;
+        default:
+            cout << "Invalid choice" << endl;
+            break;
+            
+    }
+    
+    
+    return 0;
+}
