@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    char input;
+    
+    cout << "Enter c for Car, s for SUV, or t for Truck: ";
+    cin >> input;
+    
+    switch (input) {
+        case 'c':
+        case 'C':
+            cout << "Car Toll = $0.75" << endl;
+            break;
+        case 's':
+        case 'S':
+            cout << "SUV's Toll = $1.05" << endl;
+            break;
+        case 't':
+        case 'T':
+            cout << "Trucks = $1.60" << endl;
+            break;
+        default:
+            cout << "Invalid Choice" << endl;
+            break;
+    }
+    
+
+    return 0;
+}
