@@ -1,0 +1,29 @@
+//Given string inputString on one line and string suffix on a second line, assign concatStr with the copy of inputString with suffix appended.
+//
+//Ex: If the input is:
+//
+//Fuzzy bear
+//!!!
+//
+//then the output is:
+//
+//Fuzzy bear!!!
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+   string inputString;
+   string suffix;
+   string concatStr;
+
+   getline(cin, inputString);
+   getline(cin, suffix);
+
+    concatStr = inputString.append(suffix);
+   
+    cout << concatStr << endl;
+
+   return 0;
+}
