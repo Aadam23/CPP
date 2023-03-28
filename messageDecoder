@@ -1,0 +1,45 @@
+//  P03TextMessageDecoder
+// This program decodes common SMS abbreviations
+// <Aadam Ahmed>
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    
+    string userInput;
+    string bff = "BFF";
+    string idk = "IDK";
+    string jk = "JK";
+    string tmi = "TMI";
+    string ttyl = "TTYL";
+    string output;
+    
+    
+    cout << "Enter text message: ";
+    
+    getline(cin, userInput);
+    
+    cout << endl;
+    
+    if (userInput.find("BFF") != string::npos) {
+        cout << "BFF: best friend forever" << endl;
+    }
+    if (userInput.find("IDK") != string::npos) {
+        cout << "IDK: I don't know" << endl;
+    }
+    if (userInput.find("JK") != string::npos) {
+        cout << "JK: just kidding" << endl;
+    }
+    if (userInput.find("TMI") != string::npos) {
+        cout << "TMI: too much information" << endl;
+    }
+    if (userInput.find("TTYL") != string::npos) {
+        cout << "TTYL: talk to you later" << endl;
+    }
+    
+    return 0;
+    
+    
+}
