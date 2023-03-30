@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int num = 0;
+    int sum = 0;
+    double avg;
+    int count = 0;
+    
+    cout << "Enter 5 numbers: ";
+    
+    while (count < 5) {
+        cin >> num;
+        sum = sum + num;
+        count = count + 1;
+    }
+    
+    avg = sum / 5.0;
+    
+    cout << "Sum: " << sum << endl << "Average: " << avg << endl;
+}
