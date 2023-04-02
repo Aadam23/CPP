@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 0;
+    int num = 0;
+    double sum = 0;
+    double avg = 0.0;
+    char ch = 'y';
+    
+    
+    cout << "Enter a number: ";
+    while (ch == 'y') {
+        cin >> num;
+        sum = sum + num;
+        i = i + 1;
+        
+        cout << "Enter 'y' to continue or 'n' to stop ";
+        cin >> ch;
+    }
+    
+    avg = sum / i;
+    cout << "Sum = " << sum << " Avg = " << avg << endl;
+    
+    
+    return 0;
+    
+}
