@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int grade [5];
+    int sum = 0;
+    double avg;
+    
+    cout << "Enter 5 grades: ";
+    
+    for (int i = 0; i < 5; i++) {
+        cin >> grade[i];
+    }
+    for (int i = 0; i < 5; i++) {
+        sum = sum + grade[i];
+    }
+    
+    avg  = sum / 5.0;
+    cout << "The average of 5 grades is: " << avg << endl;
+    
+    return 0;
+}
