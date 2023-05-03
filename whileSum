@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numInput;
+    int numSum;
+    
+    numSum = 0;
+    cout << "Enter positive number: ";
+    cin >> numInput;
+    
+    while (numInput > 0) {
+        cout << "Enter positive number: ";
+        numInput = numInput + numSum;
+        numSum = numInput;
+        cin >> numInput;
+    }
+    
+    cout << "The sum of numbers is equal to: " << numSum << endl;
+    
+    return 0;
+}
