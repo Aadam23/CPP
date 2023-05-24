@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+int grade[2][3]; //row=0-1 column=0-2
+int i; // associated with row
+int j; // associated with column
+int sum = 0;
+double avg;
+
+// i < 2 cuz it is the row
+for (i = 0; i < 2; i++) { // row
+    for (j = 0; j < 3; j++) { // column
+        cout << "input grade: ";
+        cin >> grade[i][j];
+    }
+    
+}
+
+    for (i = 0; i < 2; i++) { // row
+        for (j = 0; j < 3; j++) { // column
+            sum +=grade[i][j];
+        }
+    }
+    
+    avg = sum / 6;
+    
+    cout << "Sum: " << sum << " " << "Average: " << avg << endl;
+}
