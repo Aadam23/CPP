@@ -1,0 +1,35 @@
+//  Brute Force Equation Solver
+// Using Brute Force
+// <Aadam Ahmed>
+#include <iostream>
+using namespace std;
+
+int main() {
+  int a1, b1, c1, a2, b2, c2;
+  
+  cout << endl;
+  cout << "Enter coefficients (a, b, c) for first equation separated by spaces: ";
+  cin >> a1 >> b1 >> c1;
+  cout << "Enter coefficients (a, b, c) for second equation separated by spaces: ";
+  cin >> a2 >> b2 >> c2;
+  
+  // a*x + b*y = c
+  // a1*x + b1*y = c1
+  
+  bool found_solution = false;
+  
+  for (int x = -10; x <= 10; x++) {
+      for (int y = -10; y <= 10; y++) {
+          if (a1*x + b1*y == c1 && a2*x + b2*y == c2) {
+              cout << "Solution found: x = " << x << ", y = " << y << endl;
+              found_solution = true;
+          }
+      }
+  }
+  
+  if (!found_solution) {
+      cout << "There is no solution" << endl;
+  }
+  
+  return 0;
+}
