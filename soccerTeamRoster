@@ -1,0 +1,124 @@
+//  P08 SoccerTeamRoster
+// This program will store roster and rating information for a soccer team.
+// <Aadam AHmed>
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> jerseyNum; // 0-99
+    vector<int> rating;     // 1-9
+    char option = ' ';
+    // have to use do while loop
+    //  to tag an element to a vecotr use push_back
+    // user jerseyNum.erase(jerseyNum.begin()+1) to take out a jersey @ index 1
+    
+    cout << "*** Soccer Team Roster *** \n \n";
+    
+    while (option != 'q') {
+        
+        
+        cout << "--Menu-- \n";
+        cout << "a - Add player \n";
+        cout << "d - Remove player \n";
+        cout << "u - Update player rating \n";
+        cout << "r - Output players above a rating \n";
+        cout << "o - Output roster \n";
+        cout << "q - Quit \n \n";
+        cout << "Choose an option: ";
+        cin >> option;
+        cout << endl;
+        
+        int newJerseyNum;
+        int newRating;
+        bool found = false;
+        switch (option) {
+            case 'a':
+                cout << "Enter a new player's jersey number: ";
+                cin >> newJerseyNum;
+                
+                for (int i = 0; i < jerseyNum.size(); i++) {
+                    if (jerseyNum[i] == newJerseyNum) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    cout << "  >>> Jersey number " << newJerseyNum << " already in use! <<<" << endl;
+                } else {
+                    cout << "Enter the player's rating: ";
+                    cin >> newRating;
+                    
+                    jerseyNum.push_back(newJerseyNum);
+                    rating.push_back(newRating);
+                    
+                    cout << "  >>> Jersey number " << newJerseyNum << " added! <<<" << endl;
+                }
+                break;
+                
+            case 'd':
+                cout << "Enter a new player's jersey number: ";
+                cin >> newJerseyNum;
+                
+                for (int i = 0; i < jerseyNum.size(); i++) {
+                    if (jerseyNum[i] == newJerseyNum) {
+                        found = true;
+                        
+                        jerseyNum.erase(jerseyNum.begin() + i);
+                        rating.erase(rating.begin() + i);
+                        
+                        cout << "  >>> Jersey number " << newJerseyNum << " deleted! <<<" << endl;
+                    }
+                }
+                if (!found) {
+                    cout << "  >>> Jersey number " << newJerseyNum << " not found! <<<" << endl;
+                }
+                break;
+                
+            case 'u':
+                cout << "Enter a jersey number: ";
+                cin >> newJerseyNum;
+                
+                for (int i = 0; i < jerseyNum.size(); i++) {
+                    if (jerseyNum[i] == newJerseyNum) {
+                        found = true;
+                        
+                        cout << "Enter a new rating for player: ";
+                        cin >> newRating;
+                        
+                        rating[i] = newRating;
+                        
+                        cout << "  >>> Jersey number " << newJerseyNum << " rating updated! <<<" << endl;
+                        break;
+                    }
+                }
+                
+                if (!found) {
+                    cout << "  >>> Jersey number " << newJerseyNum << " not found! <<<" << endl;
+                }
+                break;
+            case 'r':
+                cout << "Enter a rating ";
+                cin >> newRating;
+                cout << "<<< Ranking Above " << newRating << ">>>" << endl;
+                
+                for (int i = 0; i < jerseyNum.size(); i++) {
+                    if (rating[i] > newRating) {
+                        cout << "Player " << i + 1 << " -- Jersey number: " << jerseyNum[i] << ", Rating: " << rating[i] << endl;
+                    }
+                }
+                break;
+            case 'o':
+                cout << "<<< Full Roster >>>" << endl;
+                
+                for (int i = 0; i < jerseyNum.size(); i++) {
+                    cout << "Player " << i + 1 << " -- Jersey number: " << jerseyNum[i] << ", Rating: " << rating[i] << endl;;
+                }
+                break;
+            case 'q':
+                break;
+        }
+        cout << endl;
+    }
+    return 0;
+}
