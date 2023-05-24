@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    enum color {red, green, blue};
+    
+    color shirt;
+    
+    shirt = red;
+    
+    if (shirt == red) {
+        cout << "Shirt is red." << endl;
+    }
+    else {
+        cout << "Shirt is not red." << endl;
+    }
+
+   return 0;
+}
