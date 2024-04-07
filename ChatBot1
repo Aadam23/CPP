@@ -22,7 +22,7 @@ int main()
     transform(user_input.begin(), user_input.end(), user_input.begin(), ::tolower);
     
     // welcome message for the bot
-    cout << "Welcome user, I am chatbot" << endl;
+    cout << "Welcome user, I am chatbot. You can ask me things like 'How are you' or 'What is my name': " << endl;
     
     //our chat functionality
     while(true) {
